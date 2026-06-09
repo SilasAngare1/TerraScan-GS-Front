@@ -1,11 +1,227 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>TerraScan | Mapa</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css">
 </head>
 <body>
-    
+    <div class="page-container">
+        <aside class="sidebar" aria-label="Menu principal">
+            <div class="logo-container">
+                <i class="fa-solid fa-globe" aria-hidden="true"></i>
+                <h2>TerraScan</h2>
+            </div>
+
+            <nav class="sidebar-menu">
+                <ul>
+                    <li>
+                        <a href="dashboard.html">
+                            <i class="fa-solid fa-chart-line" aria-hidden="true"></i>
+                            Dashboard
+                        </a>
+                    </li>
+                    <li>
+                        <a href="map.html" aria-current="page">
+                            <i class="fa-solid fa-map-location-dot" aria-hidden="true"></i>
+                            Mapa
+                        </a>
+                    </li>
+                    <li>
+                        <a href="events.html">
+                            <i class="fa-solid fa-fire" aria-hidden="true"></i>
+                            Eventos
+                        </a>
+                    </li>
+                    <li>
+                        <a href="reports.html">
+                            <i class="fa-solid fa-file-lines" aria-hidden="true"></i>
+                            Relatórios
+                        </a>
+                    </li>
+                    <li>
+                        <a href="notifications.html">
+                            <i class="fa-solid fa-bell" aria-hidden="true"></i>
+                            Notificações
+                        </a>
+                    </li>
+                    <li>
+                        <a href="profile.html">
+                            <i class="fa-solid fa-user" aria-hidden="true"></i>
+                            Perfil
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="page-content">
+            <header class="page-header">
+                <div class="page-info">
+                    <h1 class="page-title">Mapa Interativo</h1>
+                    <p class="page-subtitle">Visualização dos eventos ambientais monitorados.</p>
+                </div>
+
+                <div class="header-actions">
+                    <label class="search-box">
+                        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                        <span class="sr-only">Pesquisar região</span>
+                        <input class="form-input" type="search" placeholder="Pesquisar região">
+                    </label>
+                </div>
+            </header>
+
+            <section class="card" aria-labelledby="filters-title">
+                <header class="card-header">
+                    <h2 id="filters-title" class="section-title">Filtros</h2>
+                </header>
+
+                <div class="card-body">
+                    <form class="form">
+                        <div class="grid grid-4">
+                            <div class="form-group">
+                                <label for="state-filter">Estado</label>
+                                <select class="form-input" id="state-filter" name="state">
+                                    <option value="">Todos os estados</option>
+                                    <option value="amazonas">Amazonas</option>
+                                    <option value="para">Pará</option>
+                                    <option value="mato-grosso">Mato Grosso</option>
+                                    <option value="rondonia">Rondônia</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="event-filter">Evento</label>
+                                <select class="form-input" id="event-filter" name="event">
+                                    <option value="">Todos os eventos</option>
+                                    <option value="queimada">Queimada</option>
+                                    <option value="desmatamento">Desmatamento</option>
+                                    <option value="poluicao-hidrica">Poluição Hídrica</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="severity-filter">Gravidade</label>
+                                <select class="form-input" id="severity-filter" name="severity">
+                                    <option value="">Todas as gravidades</option>
+                                    <option value="baixo">Baixo</option>
+                                    <option value="medio">Médio</option>
+                                    <option value="alto">Alto</option>
+                                    <option value="critico">Crítico</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="date-filter">Data</label>
+                                <input class="form-input" type="date" id="date-filter" name="date">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+            <section class="card" aria-labelledby="monitoring-title">
+                <header class="card-header">
+                    <h2 id="monitoring-title" class="section-title">Monitoramento</h2>
+                </header>
+
+                <div class="card-body">
+                    <div id="map" class="map-placeholder" role="img" aria-label="Mapa de eventos ambientais">
+                        Área do mapa
+                    </div>
+                </div>
+            </section>
+
+            <section class="grid grid-2" aria-label="Legenda e informações da região">
+                <article class="card">
+                    <header class="card-header">
+                        <h2 class="section-title">Legenda</h2>
+                    </header>
+
+                    <div class="card-body">
+                        <ul class="legend-list">
+                            <li class="legend-item">
+                                <span class="legend-indicator fire" aria-hidden="true"></span>
+                                <span>Queimada</span>
+                            </li>
+                            <li class="legend-item">
+                                <span class="legend-indicator deforestation" aria-hidden="true"></span>
+                                <span>Desmatamento</span>
+                            </li>
+                            <li class="legend-item">
+                                <span class="legend-indicator pollution" aria-hidden="true"></span>
+                                <span>Poluição Hídrica</span>
+                            </li>
+                            <li class="legend-item">
+                                <span class="legend-indicator safe" aria-hidden="true"></span>
+                                <span>Área Segura</span>
+                            </li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <header class="card-header">
+                        <h2 class="section-title">Informações</h2>
+                    </header>
+
+                    <div class="card-body">
+                        <div id="region-details">
+                            <p>Selecione uma região no mapa para visualizar os detalhes.</p>
+                        </div>
+                    </div>
+                </article>
+            </section>
+
+            <section class="card" aria-labelledby="located-events-title">
+                <header class="card-header">
+                    <h2 id="located-events-title" class="section-title">Eventos Localizados</h2>
+                </header>
+
+                <div class="card-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">ID</th>
+                                <th scope="col">Evento</th>
+                                <th scope="col">Estado</th>
+                                <th scope="col">Latitude</th>
+                                <th scope="col">Longitude</th>
+                                <th scope="col">Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#001</td>
+                                <td>Queimada</td>
+                                <td>Amazonas</td>
+                                <td>-3.4653</td>
+                                <td>-62.2159</td>
+                                <td>Crítico</td>
+                            </tr>
+                            <tr>
+                                <td>#002</td>
+                                <td>Desmatamento</td>
+                                <td>Pará</td>
+                                <td>-3.4168</td>
+                                <td>-52.2188</td>
+                                <td>Alto</td>
+                            </tr>
+                            <tr>
+                                <td>#003</td>
+                                <td>Poluição Hídrica</td>
+                                <td>Mato Grosso</td>
+                                <td>-15.6014</td>
+                                <td>-56.0979</td>
+                                <td>Médio</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
 </body>
 </html>
