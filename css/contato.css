@@ -1,0 +1,134 @@
+.info-contato,
+.area-formulario {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+
+    border-radius: 22px;
+
+    padding: 30px;
+    margin-bottom: 30px;
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    box-shadow: var(--shadow);
+}
+
+.info-contato h2,
+.area-formulario h2 {
+    color: #7CFF9B;
+    margin-bottom: 18px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.info-contato p {
+    line-height: 1.7;
+    margin-bottom: 10px;
+
+    color: var(--text-secondary);
+}
+
+
+#formContato {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+
+.campo-form {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.campo-form label {
+    font-weight: 600;
+    font-size: 13px;
+    color: var(--text-secondary);
+}
+
+
+.campo-form input,
+.campo-form textarea {
+    padding: 12px 14px;
+
+    border-radius: 14px;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    background: rgba(255, 255, 255, 0.05);
+
+    color: var(--text-primary);
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition: 0.25s ease;
+}
+
+.campo-form input:focus,
+.campo-form textarea:focus {
+    border-color: rgba(124, 255, 155, 0.6);
+    box-shadow: 0 0 0 3px rgba(124, 255, 155, 0.08);
+}
+
+
+.campo-form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+
+.erro {
+    color: #ff6b6b;
+    font-size: 12px;
+    min-height: 16px;
+}
+
+
+#formContato button {
+    width: fit-content;
+
+    padding: 12px 20px;
+
+    border: none;
+    border-radius: 14px;
+
+    background: linear-gradient(135deg, #2E7D32, #43A047);
+
+    color: white;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+
+    box-shadow: 0 6px 16px rgba(46,125,50,0.25);
+}
+
+#formContato button:hover {
+    transform: translateY(-2px);
+}
+
+
+#mensagemSucesso {
+    color: #7CFF9B;
+    font-weight: 600;
+    margin-top: 8px;
+}
+
+
+@media (max-width: 768px) {
+    .info-contato,
+    .area-formulario {
+        padding: 22px;
+    }
+
+    #formContato button {
+        width: 100%;
+    }
+}
