@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TerraScan | Contato</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/contatos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+
+<div class="page-container">
+
+    <aside class="sidebar" aria-label="Menu principal">
+
+        <div class="logo-container">
+            <i class="fa-solid fa-globe"></i>
+            <h2>Terra<span>Scan</span></h2>
+        </div>
+
+        <nav class="sidebar-menu">
+            <ul>
+                <li><a href="dashboard.html"><i class="fa-solid fa-chart-line"></i> Dashboard</a></li>
+                <li><a href="map.html"><i class="fa-solid fa-map"></i> Mapas</a></li>
+                <li><a href="events.html"><i class="fa-solid fa-bell"></i> Eventos</a></li>
+                <li><a href="reports.html"><i class="fa-solid fa-file-alt"></i> Relatórios</a></li>
+                <li><a href="faq.html"><i class="fa-solid fa-question"></i> FAQ</a></li>
+
+                <li><a href="contatos.html" aria-current="page">
+                    <i class="fa-solid fa-envelope"></i> Contato
+                </a></li>
+
+                <li><a href="integrantes.html"><i class="fa-solid fa-users"></i> Integrantes</a></li>
+                <li><a href="sobre.html"><i class="fa-solid fa-info-circle"></i> Sobre</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main class="page-content">
+
+        <header class="page-header">
+
+            <div class="page-info">
+                <h1 class="page-title">Contato</h1>
+                <p class="page-subtitle">
+                    Entre em contato com a equipe do sistema de monitoramento ambiental TerraScan
+                </p>
+            </div>
+
+        </header>
+
+        <section class="grid grid-2">
+
+            <article class="card">
+                <header class="card-header">
+                    <h2 class="section-title">Informações do Projeto</h2>
+                </header>
+
+                <div class="card-body">
+                    <p><strong>E-mail:</strong> contato@terrascan.org</p>
+                    <p><strong>Atendimento:</strong> Segunda a sexta, 09h às 18h</p>
+                    <p><strong>Projeto:</strong> Sistema de monitoramento ambiental para registro e análise de ocorrências ecológicas.</p>
+                </div>
+            </article>
+
+            <article class="card">
+                <header class="card-header">
+                    <h2 class="section-title">Envie uma mensagem</h2>
+                </header>
+
+                <div class="card-body">
+                    <form id="formContato" onsubmit="validarFormulario(event)">
+                        <div class="form-group">
+                            <label>Nome</label>
+                            <input type="text" id="nome" class="form-input">
+                            <small id="erroNome"></small>
+                        </div>
+                        <div class="form-group">
+                            <label>E-mail</label>
+                            <input type="email" id="email" class="form-input">
+                            <small id="erroEmail"></small>
+                        </div>
+                        <div class="form-group">
+                            <label>Assunto</label>
+                            <input type="text" id="assunto" class="form-input">
+                            <small id="erroAssunto"></small>
+                        </div>
+                        <div class="form-group">
+                            <label>Mensagem</label>
+                            <textarea id="mensagem" class="form-input" rows="5"></textarea>
+                            <small id="erroMensagem"></small>
+                        </div>
+                        <button type="submit" class="button button-primary">
+                            Enviar mensagem
+                        </button>
+                        <p id="mensagemSucesso"></p>
+                    </form>
+                </div>
+            </article>
+        </section>
+    </main>
+</div>
+
+<script src="../js/contatos.js"></script>
+
+</body>
+</html>
