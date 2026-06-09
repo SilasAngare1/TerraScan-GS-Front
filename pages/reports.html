@@ -177,6 +177,96 @@
                     </form>
                 </div>
             </section>
+
+            <section id="reports-list" class="card" aria-labelledby="reports-list-title">
+                <header class="card-header">
+                    <h2 id="reports-list-title" class="section-title">Relatórios Disponíveis</h2>
+                </header>
+                <div class="card-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">ID</th>
+                                <th scope="col">Relatório</th>
+                                <th scope="col">Região</th>
+                                <th scope="col">Período</th>
+                                <th scope="col">Status</th>
+                                <th scope="col">Atualização</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#REL-001</td>
+                                <td>Monitoramento de Queimadas</td>
+                                <td>Amazonas</td>
+                                <td>Junho/2026</td>
+                                <td><span class="status-critico">Crítico</span></td>
+                                <td>08/06/2026</td>
+                            </tr>
+                            <tr>
+                                <td>#REL-002</td>
+                                <td>Avanço de Desmatamento</td>
+                                <td>Pará</td>
+                                <td>Junho/2026</td>
+                                <td><span class="status-alto">Alto</span></td>
+                                <td>07/06/2026</td>
+                            </tr>
+                            <tr>
+                                <td>#REL-003</td>
+                                <td>Poluição Hídrica Detectada</td>
+                                <td>Mato Grosso</td>
+                                <td>Maio/2026</td>
+                                <td><span class="status-medio">Médio</span></td>
+                                <td>30/05/2026</td>
+                            </tr>
+                            <tr>
+                                <td>#REL-004</td>
+                                <td>Áreas Estáveis Monitoradas</td>
+                                <td>Rondônia</td>
+                                <td>Maio/2026</td>
+                                <td><span class="status-baixo">Baixo</span></td>
+                                <td>28/05/2026</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="grid grid-2" aria-label="Detalhes e histórico do relatório">
+                <article class="card">
+                    <header class="card-header">
+                        <h2 class="section-title">Detalhes do Relatório</h2>
+                    </header>
+                    <div class="card-body">
+                        <p>Selecione um relatório na lista para consultar as informações completas.</p>
+                        <dl class="details-list">
+                            <dt>ID</dt>
+                            <dd>#REL-001</dd>
+                            <dt>Relatório</dt>
+                            <dd>Monitoramento de Queimadas</dd>
+                            <dt>Região</dt>
+                            <dd>Amazonas</dd>
+                            <dt>Período</dt>
+                            <dd>Junho/2026</dd>
+                            <dt>Descrição</dt>
+                            <dd>Registro consolidado dos focos de queimada detectados nas áreas monitoradas.</dd>
+                        </dl>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <header class="card-header">
+                        <h2 class="section-title">Histórico</h2>
+                    </header>
+                    <div class="card-body">
+                        <ul class="history-list">
+                            <li>08/06/2026 - Relatório atualizado</li>
+                            <li>07/06/2026 - Novos dados adicionados</li>
+                            <li>06/06/2026 - Consulta registrada no sistema</li>
+                        </ul>
+                    </div>
+                </article>
+            </section>
         </main>
     </div>
 </body>
