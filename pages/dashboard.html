@@ -1,35 +1,235 @@
 <!DOCTYPE html>
- <html lang="pt-BR"> 
-    <head>
-            <meta charset="UTF-8"> 
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>TerraScan | Dashboard</title> <link rel="stylesheet" href="css/dashboard.css"> 
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-     </head>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TerraScan | Dashboard</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
 <body>
-    <div class = page-container>
-        <aside class = sidebar>
-            <div class = logo-container>
-                <i class="fa-solid fa-globe" ></i>
+    <div class="page-container">
+        <aside class="sidebar" aria-label="Menu principal">
+            <div class="logo-container">
+                <i class="fa-solid fa-globe" aria-hidden="true"></i>
                 <h2>TerraScan</h2>
             </div>
-            
-            <nav class = sidebar-menu>
+
+            <nav class="sidebar-menu">
                 <ul>
-                    <li><a href="#"><i class="fa-solid fa-chart-line"></i> Dashboard</a></li>
-                    <li><a href="#"><i class="fa-solid fa-map"></i> Mapas</a></li>
-                    <li><a href="#"><i class="fa-solid fa-bell"></i> Eventos</a></li>
-                    <li><a href="#"><i class="fa-solid fa-cogs"></i> Relatórios</a></li>
-                    <li><a href="#"><i class="fa-solid fa-right-from-bracket"></i> Notificações</a></li>
-                    <li><a href="#"><i class="fa-solid fa-user"></i> Perfil</a></li>
+                    <li>
+                        <a href="dashboard.html" aria-current="page">
+                            <i class="fa-solid fa-chart-line" aria-hidden="true"></i>
+                            Dashboard
+                        </a>
+                    </li>
+                    <li>
+                        <a href="map.html">
+                            <i class="fa-solid fa-map" aria-hidden="true"></i>
+                            Mapas
+                        </a>
+                    </li>
+                    <li>
+                        <a href="events.html">
+                            <i class="fa-solid fa-bell" aria-hidden="true"></i>
+                            Eventos
+                        </a>
+                    </li>
+                    <li>
+                        <a href="reports.html">
+                            <i class="fa-solid fa-file-alt" aria-hidden="true"></i>
+                            Relatórios
+                        </a>
+                    </li>
+                    <li>
+                        <a href="notifications.html">
+                            <i class="fa-solid fa-bell" aria-hidden="true"></i>
+                            Notificações
+                        </a>
+                    </li>
+                    <li>
+                        <a href="profile.html">
+                            <i class="fa-solid fa-user" aria-hidden="true"></i>
+                            Perfil
+                        </a>
+                    </li>
                 </ul>
-
             </nav>
-
         </aside>
 
-    </div>
+        <main class="page-content">
+            <header class="page-header">
+                <div class="page-info">
+                    <h1 class="page-title">Dashboard</h1>
+                    <p class="page-subtitle">Visão geral do monitoramento ambiental</p>
+                </div>
 
-    
+                <div class="header-actions">
+                    <label class="search-box">
+                        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                        <span class="sr-only">Pesquisar</span>
+                        <input class="form-input" type="search" placeholder="Pesquisar">
+                    </label>
+
+                    <div class="user-profile">
+                        <div class="user-avatar" aria-hidden="true">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                        <div class="user-info">
+                            <strong>Ana Souza</strong>
+                            <small>Analista Ambiental</small>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <section class="stats-grid" aria-label="Resumo de alertas ambientais">
+                <article class="card stat-card">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-fire" aria-hidden="true"></i>
+                    </div>
+                    <div>
+                        <h2>127</h2>
+                        <p>Queimadas</p>
+                    </div>
+                </article>
+
+                <article class="card stat-card">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-tree" aria-hidden="true"></i>
+                    </div>
+                    <div>
+                        <h2>64</h2>
+                        <p>Desmatamentos</p>
+                    </div>
+                </article>
+
+                <article class="card stat-card">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-water" aria-hidden="true"></i>
+                    </div>
+                    <div>
+                        <h2>19</h2>
+                        <p>Poluição Hídrica</p>
+                    </div>
+                </article>
+
+                <article class="card stat-card">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-satellite" aria-hidden="true"></i>
+                    </div>
+                    <div>
+                        <h2>12</h2>
+                        <p>Satélites Ativos</p>
+                    </div>
+                </article>
+            </section>
+
+            <section class="grid grid-2" aria-label="Gráficos e mapa">
+                <article class="card">
+                    <header class="card-header">
+                        <h2 class="section-title">Alertas da Semana</h2>
+                    </header>
+                    <div class="card-body">
+                        <div class="chart-placeholder">Gráfico de Alertas</div>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <header class="card-header">
+                        <h2 class="section-title">Mapa de Monitoramento</h2>
+                    </header>
+                    <div class="card-body">
+                        <div class="map-placeholder">Área do mapa</div>
+                    </div>
+                </article>
+            </section>
+
+            <section class="card" aria-labelledby="recent-events-title">
+                <header class="card-header">
+                    <h2 id="recent-events-title" class="section-title">Eventos Recentes</h2>
+                </header>
+                <div class="card-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">ID</th>
+                                <th scope="col">Evento</th>
+                                <th scope="col">Localização</th>
+                                <th scope="col">Status</th>
+                                <th scope="col">Horário</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#001</td>
+                                <td>Queimada</td>
+                                <td>Amazonas</td>
+                                <td>Crítico</td>
+                                <td>10:42</td>
+                            </tr>
+                            <tr>
+                                <td>#002</td>
+                                <td>Desmatamento</td>
+                                <td>Pará</td>
+                                <td>Médio</td>
+                                <td>09:12</td>
+                            </tr>
+                            <tr>
+                                <td>#003</td>
+                                <td>Poluição Hídrica</td>
+                                <td>Pantanal</td>
+                                <td>Baixo</td>
+                                <td>08:27</td>
+                            </tr>
+                            <tr>
+                                <td>#004</td>
+                                <td>Queimada</td>
+                                <td>Mato Grosso</td>
+                                <td>Alto</td>
+                                <td>07:44</td>
+                            </tr>
+                            <tr>
+                                <td>#005</td>
+                                <td>Desmatamento</td>
+                                <td>Rondônia</td>
+                                <td>Médio</td>
+                                <td>06:53</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="grid grid-2" aria-label="Relatórios e atividades recentes">
+                <article class="card">
+                    <header class="card-header">
+                        <h2 class="section-title">Últimos Relatórios</h2>
+                    </header>
+                    <div class="card-body">
+                        <ul class="report-list">
+                            <li>Relatório Amazônia.pdf</li>
+                            <li>Relatório Cerrado.pdf</li>
+                            <li>Relatório Pantanal.pdf</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <header class="card-header">
+                        <h2 class="section-title">Atividades Recentes</h2>
+                    </header>
+                    <div class="card-body">
+                        <ul class="activity-list">
+                            <li>Novo alerta emitido.</li>
+                            <li>Relatório atualizado.</li>
+                            <li>Satélite sincronizado.</li>
+                            <li>Nova região adicionada.</li>
+                        </ul>
+                    </div>
+                </article>
+            </section>
+        </main>
+    </div>
 </body>
 </html>
