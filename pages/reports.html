@@ -127,6 +127,56 @@
                     </div>
                 </article>
             </section>
+
+            <section class="card" aria-labelledby="report-filters-title">
+                <header class="card-header">
+                    <h2 id="report-filters-title" class="section-title">Filtros de Consulta</h2>
+                </header>
+                <div class="card-body">
+                    <form class="form grid grid-4">
+                        <div class="form-group">
+                            <label for="report-type">Tipo</label>
+                            <select class="form-input" id="report-type" name="report-type">
+                                <option value="">Todos os tipos</option>
+                                <option value="queimada">Queimada</option>
+                                <option value="desmatamento">Desmatamento</option>
+                                <option value="poluicao-hidrica">Poluição Hídrica</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="report-region">Região</label>
+                            <select class="form-input" id="report-region" name="report-region">
+                                <option value="">Todas as regiões</option>
+                                <option value="amazonas">Amazonas</option>
+                                <option value="para">Pará</option>
+                                <option value="mato-grosso">Mato Grosso</option>
+                                <option value="rondonia">Rondônia</option>
+                            </select>
+                        </div>
+
+                        
+                        <div class="form-group">
+                            <label for="report-status">Status</label>
+                            <select class="form-input" id="report-status" name="report-status">
+                                <option value="">Todos os status</option>
+                                <option value="critico">Crítico</option>
+                                <option value="alto">Alto</option>
+                                <option value="medio">Médio</option>
+                                <option value="baixo">Baixo</option>
+                            </select>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="report-period">Período</label>
+                            <input class="form-input" type="month" id="report-period" name="report-period">
+                        </div>
+                    
+                    
+                    </form>
+                </div>
+            </section>
         </main>
     </div>
 </body>
