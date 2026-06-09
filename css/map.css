@@ -1,0 +1,298 @@
+:root{
+    --map-red:#ff4d4d;
+    --map-yellow:#ffc107;
+    --map-blue:#4da6ff;
+    --map-green:#52ff92;
+}
+
+.monitoring-card .card-body{
+    padding:0;
+}
+
+.map-wrapper{
+    position:relative;
+    padding:24px;
+}
+
+#map,
+.map-placeholder{
+    position:relative;
+
+    width:100%;
+    height:600px;
+
+    overflow:hidden;
+
+    border-radius:18px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    background:#09110d;
+}
+
+.map-image,
+.map-placeholder img{
+    width:100%;
+    height:100%;
+
+    display:block;
+
+    object-fit:cover;
+}
+
+.map-placeholder::before{
+    content:"";
+
+    position:absolute;
+    inset:0;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,.05),
+        rgba(0,0,0,.22)
+    );
+
+    z-index:1;
+
+    pointer-events:none;
+}
+
+.map-overlay{
+    position:absolute;
+
+    top:42px;
+    left:42px;
+    right:42px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    z-index:20;
+}
+
+.map-status,
+.map-counter{
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+    padding:12px 18px;
+
+    border-radius:14px;
+
+    background:rgba(10,15,12,.92);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(14px);
+
+    box-shadow:
+        0 8px 20px rgba(0,0,0,.25);
+
+    font-size:14px;
+    font-weight:600;
+}
+
+.map-status{
+    color:#7CFF9B;
+}
+
+.map-counter{
+    color:white;
+}
+
+.map-legend-floating{
+    position:absolute;
+
+    left:42px;
+    bottom:42px;
+
+    display:flex;
+    gap:18px;
+
+    padding:14px 18px;
+
+    border-radius:14px;
+
+    background:rgba(10,15,12,.92);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(14px);
+
+    z-index:20;
+}
+
+.legend-color{
+    display:flex;
+    align-items:center;
+    gap:8px;
+
+    color:white;
+
+    font-size:13px;
+    font-weight:500;
+}
+
+.dot{
+    width:12px;
+    height:12px;
+
+    border-radius:50%;
+}
+
+.dot.red{
+    background:var(--map-red);
+
+    box-shadow:
+        0 0 8px var(--map-red),
+        0 0 16px var(--map-red);
+}
+
+.dot.yellow{
+    background:var(--map-yellow);
+
+    box-shadow:
+        0 0 8px var(--map-yellow),
+        0 0 16px var(--map-yellow);
+}
+
+.dot.blue{
+    background:var(--map-blue);
+
+    box-shadow:
+        0 0 8px var(--map-blue),
+        0 0 16px var(--map-blue);
+}
+
+.legend-list{
+    list-style:none;
+
+    display:flex;
+    flex-direction:column;
+
+    gap:18px;
+}
+
+.legend-item{
+    display:flex;
+    align-items:flex-start;
+
+    gap:14px;
+}
+
+.legend-item strong{
+    display:block;
+    margin-bottom:4px;
+}
+
+.legend-item p{
+    color:var(--text-secondary);
+
+    font-size:13px;
+    line-height:1.4;
+}
+
+.legend-indicator{
+    width:16px;
+    height:16px;
+
+    margin-top:4px;
+
+    border-radius:50%;
+
+    flex-shrink:0;
+}
+
+.legend-indicator.fire{
+    background:var(--map-red);
+
+    box-shadow:0 0 12px var(--map-red);
+}
+
+.legend-indicator.deforestation{
+    background:var(--map-yellow);
+
+    box-shadow:0 0 12px var(--map-yellow);
+}
+
+.legend-indicator.pollution{
+    background:var(--map-blue);
+
+    box-shadow:0 0 12px var(--map-blue);
+}
+
+.legend-indicator.safe{
+    background:var(--map-green);
+
+    box-shadow:0 0 12px var(--map-green);
+}
+
+#region-details{
+    display:flex;
+    flex-direction:column;
+}
+
+.info-item{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:14px 0;
+
+    border-bottom:1px solid rgba(255,255,255,.06);
+}
+
+.info-item:last-child{
+    border-bottom:none;
+}
+
+.info-item strong{
+    color:white;
+}
+
+.info-item span{
+    color:var(--text-secondary);
+}
+
+@media(max-width:1200px){
+
+    #map,
+    .map-placeholder{
+        height:500px;
+    }
+}
+
+@media(max-width:900px){
+
+    .map-wrapper{
+        padding:16px;
+    }
+
+    #map,
+    .map-placeholder{
+        height:380px;
+    }
+
+    .map-overlay{
+        left:24px;
+        right:24px;
+        top:24px;
+
+        flex-direction:column;
+        align-items:flex-start;
+
+        gap:10px;
+    }
+
+    .map-legend-floating{
+        left:24px;
+        right:24px;
+        bottom:24px;
+
+        flex-direction:column;
+
+        gap:10px;
+    }
+}

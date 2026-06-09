@@ -198,6 +198,11 @@ body {
     color: rgba(255,255,255,0.5);
 }
 
+select.form-input option {
+    color: #111111;
+    background: #ffffff;
+}
+
 .user-profile {
     display: flex;
     align-items: center;
