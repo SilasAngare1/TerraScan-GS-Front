@@ -1,0 +1,126 @@
+.faq-container {
+    width: 100%;
+    padding: 30px;
+
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+
+    border-radius: 24px;
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    box-shadow: var(--shadow);
+}
+
+
+.faq-item {
+    background: rgba(255, 255, 255, 0.04);
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+
+    margin-bottom: 14px;
+
+    overflow: hidden;
+
+    transition: 0.25s ease;
+}
+
+.faq-item:hover {
+    transform: translateY(-4px);
+    background: rgba(255, 255, 255, 0.06);
+    box-shadow: var(--shadow);
+}
+
+
+.faq-question {
+    width: 100%;
+    padding: 18px 20px;
+
+    border: none;
+    cursor: pointer;
+
+    background: transparent;
+
+    color: var(--text-primary);
+
+    font-size: 15px;
+    font-weight: 600;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    transition: 0.25s ease;
+}
+
+.faq-question:hover {
+    color: #7CFF9B;
+}
+
+.faq-question::after {
+    content: "⌄";
+    font-size: 18px;
+
+    color: rgba(124, 255, 155, 0.9);
+
+    transition: transform 0.3s ease;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+
+    padding: 0 20px;
+
+    transition: max-height 0.35s ease, padding 0.35s ease;
+
+    background: rgba(0, 0, 0, 0.15);
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.faq-answer p {
+    color: var(--text-secondary);
+    font-size: 14px;
+    line-height: 1.6;
+
+    padding-bottom: 18px;
+}
+
+
+.faq-item.active .faq-answer {
+    max-height: 300px;
+    padding: 16px 20px;
+}
+
+.faq-item.active .faq-question::after {
+    transform: rotate(180deg);
+}
+
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    margin: 80px 0 50px;
+}
+
+header h1 span {
+    font-size: 44px;
+    font-weight: 800;
+
+    color: #7CFF9B;
+}
+
+header p {
+    font-size: 16px;
+    color: var(--text-secondary);
+}
+
+
+main {
+    padding: 80px 30px 100px;
+}
