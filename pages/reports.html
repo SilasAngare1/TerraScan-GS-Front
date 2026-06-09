@@ -73,7 +73,7 @@
             <header class="page-header">
                 <div class="page-info">
                     <h1 class="page-title">Relatórios</h1>
-                    <p class="page-subtitle">Consulta e organização dos registros ambientais monitorados.</p>
+                    <p class="page-subtitle">Consulta dos relatórios ambientais registrados no sistema.</p>
                 </div>
 
                 <div class="header-actions">
@@ -82,9 +82,51 @@
                         <span class="sr-only">Pesquisar relatório</span>
                         <input class="form-input" type="search" placeholder="Pesquisar relatório">
                     </label>
-                    <a href="#" class="button button-primary">Gerar Relatório</a>
+                    <a href="#reports-list" class="button button-primary">Ver Relatórios</a>
                 </div>
             </header>
+
+            <section class="stats-grid" aria-label="Resumo dos relatórios">
+                <article class="card stat-card">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-file-circle-check" aria-hidden="true"></i>
+                    </div>
+                    <div>
+                        <h2>42</h2>
+                        <p>Relatórios emitidos</p>
+                    </div>
+                </article>
+
+                <article class="card stat-card">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i>
+                    </div>
+                    <div>
+                        <h2>18</h2>
+                        <p>Ocorrências críticas</p>
+                    </div>
+                </article>
+
+                <article class="card stat-card">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-map-location-dot" aria-hidden="true"></i>
+                    </div>
+                    <div>
+                        <h2>7</h2>
+                        <p>Regiões analisadas</p>
+                    </div>
+                </article>
+
+                <article class="card stat-card">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-clock-rotate-left" aria-hidden="true"></i>
+                    </div>
+                    <div>
+                        <h2>24h</h2>
+                        <p>Última atualização</p>
+                    </div>
+                </article>
+            </section>
         </main>
     </div>
 </body>
