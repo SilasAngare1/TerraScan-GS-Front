@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TerraScan | Relatórios</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css">
+</head>
+<body>
+    <div class="page-container">
+        <aside class="sidebar" aria-label="Menu principal">
+            <div class="logo-container">
+                <i class="fa-solid fa-globe" aria-hidden="true"></i>
+                <h2>TerraScan</h2>
+            </div>
+
+            <nav class="sidebar-menu">
+                <ul>
+                    <li>
+                        <a href="dashboard.html">
+                            <i class="fa-solid fa-chart-line" aria-hidden="true"></i>
+                            Dashboard
+                        </a>
+                    </li>
+                    <li>
+                        <a href="map.html">
+                            <i class="fa-solid fa-map" aria-hidden="true"></i>
+                            Mapas
+                        </a>
+                    </li>
+                    <li>
+                        <a href="events.html">
+                            <i class="fa-solid fa-bell" aria-hidden="true"></i>
+                            Eventos
+                        </a>
+                    </li>
+                    <li>
+                        <a href="reports.html" aria-current="page">
+                            <i class="fa-solid fa-file-alt" aria-hidden="true"></i>
+                            Relatórios
+                        </a>
+                    </li>
+                    <li>
+                        <a href="faq.html">
+                            <i class="fa-solid fa-question" aria-hidden="true"></i>
+                            FAQ
+                        </a>
+                    </li>
+                    <li>
+                        <a href="contatos.html">
+                            <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                            Contatos
+                        </a>
+                    </li>
+                    <li>
+                        <a href="integrantes.html">
+                            <i class="fa-solid fa-users" aria-hidden="true"></i>
+                            Integrantes
+                        </a>
+                    </li>
+                    <li>
+                        <a href="sobre.html">
+                            <i class="fa-solid fa-info-circle" aria-hidden="true"></i>
+                            Sobre
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="page-content">
+            <header class="page-header">
+                <div class="page-info">
+                    <h1 class="page-title">Relatórios</h1>
+                    <p class="page-subtitle">Consulta dos relatórios ambientais registrados no sistema.</p>
+                </div>
+
+                <div class="header-actions">
+                    <label class="search-box">
+                        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                        <span class="sr-only">Pesquisar relatório</span>
+                        <input class="form-input" type="search" placeholder="Pesquisar relatório">
+                    </label>
+                    <a href="#reports-list" class="button button-primary">Ver Relatórios</a>
+                </div>
+            </header>
+
+            <section class="stats-grid" aria-label="Resumo dos relatórios">
+                <article class="card stat-card">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-file-circle-check" aria-hidden="true"></i>
+                    </div>
+                    <div>
+                        <h2>42</h2>
+                        <p>Relatórios emitidos</p>
+                    </div>
+                </article>
+
+                <article class="card stat-card">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i>
+                    </div>
+                    <div>
+                        <h2>18</h2>
+                        <p>Ocorrências críticas</p>
+                    </div>
+                </article>
+
+                <article class="card stat-card">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-map-location-dot" aria-hidden="true"></i>
+                    </div>
+                    <div>
+                        <h2>7</h2>
+                        <p>Regiões analisadas</p>
+                    </div>
+                </article>
+
+                <article class="card stat-card">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-clock-rotate-left" aria-hidden="true"></i>
+                    </div>
+                    <div>
+                        <h2>24h</h2>
+                        <p>Última atualização</p>
+                    </div>
+                </article>
+            </section>
+
+            <section class="card" aria-labelledby="report-filters-title">
+                <header class="card-header">
+                    <h2 id="report-filters-title" class="section-title">Filtros de Consulta</h2>
+                </header>
+                <div class="card-body">
+                    <form class="form grid grid-4">
+                        <div class="form-group">
+                            <label for="report-type">Tipo</label>
+                            <select class="form-input" id="report-type" name="report-type">
+                                <option value="">Todos os tipos</option>
+                                <option value="queimada">Queimada</option>
+                                <option value="desmatamento">Desmatamento</option>
+                                <option value="poluicao-hidrica">Poluição Hídrica</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="report-region">Região</label>
+                            <select class="form-input" id="report-region" name="report-region">
+                                <option value="">Todas as regiões</option>
+                                <option value="amazonas">Amazonas</option>
+                                <option value="para">Pará</option>
+                                <option value="mato-grosso">Mato Grosso</option>
+                                <option value="rondonia">Rondônia</option>
+                            </select>
+                        </div>
+
+                        
+                        <div class="form-group">
+                            <label for="report-status">Status</label>
+                            <select class="form-input" id="report-status" name="report-status">
+                                <option value="">Todos os status</option>
+                                <option value="critico">Crítico</option>
+                                <option value="alto">Alto</option>
+                                <option value="medio">Médio</option>
+                                <option value="baixo">Baixo</option>
+                            </select>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="report-period">Período</label>
+                            <input class="form-input" type="month" id="report-period" name="report-period">
+                        </div>
+                    
+                    
+                    </form>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
