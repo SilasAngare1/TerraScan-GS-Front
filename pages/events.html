@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TerraScan | Eventos</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="page-container">
+        <aside class="sidebar" aria-label="Menu principal">
+            <div class="logo-container">
+                <i class="fa-solid fa-globe" aria-hidden="true"></i>
+                <h2>TerraScan</h2>
+            </div>
+
+            <nav class="sidebar-menu">
+                <ul>
+                    <li>
+                        <a href="dashboard.html">
+                            <i class="fa-solid fa-chart-line" aria-hidden="true"></i>
+                            Dashboard
+                        </a>
+                    </li>
+                    <li>
+                        <a href="map.html">
+                            <i class="fa-solid fa-map-location-dot" aria-hidden="true"></i>
+                            Mapa
+                        </a>
+                    </li>
+                    <li>
+                        <a href="events.html" aria-current="page">
+                            <i class="fa-solid fa-bell" aria-hidden="true"></i>
+                            Eventos
+                        </a>
+                    </li>
+                    <li>
+                        <a href="reports.html">
+                            <i class="fa-solid fa-file-lines" aria-hidden="true"></i>
+                            Relatórios
+                        </a>
+                    </li>
+                    <li>
+                        <a href="notifications.html">
+                            <i class="fa-solid fa-bell" aria-hidden="true"></i>
+                            Notificações
+                        </a>
+                    </li>
+                    <li>
+                        <a href="profile.html">
+                            <i class="fa-solid fa-user" aria-hidden="true"></i>
+                            Perfil
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="page-content">
+            <header class="page-header">
+                <div class="page-info">
+                    <h1 class="page-title">Eventos Ambientais</h1>
+                    <p class="page-subtitle">Gerenciamento e acompanhamento dos eventos detectados.</p>
+                </div>
+
+                <div class="header-actions">
+                    <label class="search-box">
+                        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                        <span class="sr-only">Pesquisar evento</span>
+                        <input class="form-input" type="search" placeholder="Pesquisar evento">
+                    </label>
+                    <a href="#" class="button button-primary">Novo Evento</a>
+                </div>
+            </header>
+
+            <section class="stats-grid" aria-label="Resumo de eventos">
+                <article class="card stat-card">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-fire" aria-hidden="true"></i>
+                    </div>
+                    <div>
+                        <h2>127</h2>
+                        <p>Queimadas</p>
+                    </div>
+                </article>
+
+                <article class="card stat-card">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-tree" aria-hidden="true"></i>
+                    </div>
+                    <div>
+                        <h2>64</h2>
+                        <p>Desmatamentos</p>
+                    </div>
+                </article>
+
+                <article class="card stat-card">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-water" aria-hidden="true"></i>
+                    </div>
+                    <div>
+                        <h2>19</h2>
+                        <p>Poluição Hídrica</p>
+                    </div>
+                </article>
+            </section>
+
+            <section class="card" aria-labelledby="filters-title">
+                <header class="card-header">
+                    <h2 id="filters-title" class="section-title">Filtros</h2>
+                </header>
+                <div class="card-body">
+                    <form class="form grid grid-4">
+                        <div class="form-group">
+                            <label for="event-filter">Evento</label>
+                            <select class="form-input" id="event-filter" name="event">
+                                <option value="">Todos os eventos</option>
+                                <option value="queimada">Queimada</option>
+                                <option value="desmatamento">Desmatamento</option>
+                                <option value="poluicao-hidrica">Poluição Hídrica</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="state-filter">Estado</label>
+                            <select class="form-input" id="state-filter" name="state">
+                                <option value="">Todos os estados</option>
+                                <option value="amazonas">Amazonas</option>
+                                <option value="para">Pará</option>
+                                <option value="mato-grosso">Mato Grosso</option>
+                                <option value="rondonia">Rondônia</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="status-filter">Status</label>
+                            <select class="form-input" id="status-filter" name="status">
+                                <option value="">Todos os status</option>
+                                <option value="critico">Crítico</option>
+                                <option value="alto">Alto</option>
+                                <option value="medio">Médio</option>
+                                <option value="baixo">Baixo</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="date-filter">Data</label>
+                            <input class="form-input" type="date" id="date-filter" name="date">
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+            <section class="card" aria-labelledby="events-list-title">
+                <header class="card-header">
+                    <h2 id="events-list-title" class="section-title">Lista de Eventos</h2>
+                </header>
+                <div class="card-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">ID</th>
+                                <th scope="col">Evento</th>
+                                <th scope="col">Local</th>
+                                <th scope="col">Data</th>
+                                <th scope="col">Status</th>
+                                <th scope="col">Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#001</td>
+                                <td>Queimada</td>
+                                <td>Amazonas</td>
+                                <td>08/06/2026</td>
+                                <td>Crítico</td>
+                                <td><a href="#" class="table-link">Ver</a></td>
+                            </tr>
+                            <tr>
+                                <td>#002</td>
+                                <td>Desmatamento</td>
+                                <td>Pará</td>
+                                <td>07/06/2026</td>
+                                <td>Alto</td>
+                                <td><a href="#" class="table-link">Ver</a></td>
+                            </tr>
+                            <tr>
+                                <td>#003</td>
+                                <td>Poluição Hídrica</td>
+                                <td>Mato Grosso</td>
+                                <td>06/06/2026</td>
+                                <td>Médio</td>
+                                <td><a href="#" class="table-link">Ver</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="grid grid-2" aria-label="Detalhes e histórico do evento">
+                <article class="card">
+                    <header class="card-header">
+                        <h2 class="section-title">Detalhes do Evento</h2>
+                    </header>
+                    <div class="card-body">
+                        <p>Selecione um evento na lista para ver os detalhes.</p>
+                        <dl class="details-list">
+                            <dt>ID</dt>
+                            <dd>#001</dd>
+                            <dt>Evento</dt>
+                            <dd>Queimada</dd>
+                            <dt>Local</dt>
+                            <dd>Amazonas</dd>
+                            <dt>Gravidade</dt>
+                            <dd>Crítico</dd>
+                            <dt>Descrição</dt>
+                            <dd>Foco de queimada detectado próximo a uma área de reserva florestal.</dd>
+                        </dl>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <header class="card-header">
+                        <h2 class="section-title">Histórico</h2>
+                    </header>
+                    <div class="card-body">
+                        <ul class="history-list">
+                            <li>08/06/2026 10:42 - Evento registrado</li>
+                            <li>08/06/2026 11:15 - Equipe notificada</li>
+                            <li>08/06/2026 12:30 - Imagens de satélite analisadas</li>
+                        </ul>
+                    </div>
+                </article>
+            </section>
+        </main>
+    </div>
+
+</body>
+</html>
