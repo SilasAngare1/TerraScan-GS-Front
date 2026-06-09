@@ -1,20 +1,81 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TerraScan</title>
+    <title>TerraScan | Login</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-   
+    <main class="login-page">
+        <section class="hero-section" aria-labelledby="hero-title">
+            <div class="hero-content">
+                <div class="hero-brand">
+                    <i class="fa-solid fa-globe" aria-hidden="true"></i>
+                    <h2>Bem-vindo ao TerraScan</h2>
+                </div>
 
-  
+                <h1 id="hero-title" class="hero-title">Monitoramento Ambiental Inteligente</h1>
+                <p class="hero-description">
+                    Detectamos queimadas, desmatamento e poluição hídrica utilizando satélites,
+                    inteligência artificial e análise em tempo real para auxiliar órgãos ambientais
+                    e equipes de resposta rápida.
+                </p>
+
+                <div class="stats-container" aria-label="Indicadores do TerraScan">
+                    <article class="stat-card">
+                        <i class="fa-solid fa-satellite" aria-hidden="true"></i>
+                        <h3>Satélites Ativos</h3>
+                        <p>500</p>
+                    </article>
+
+                    <article class="stat-card">
+                        <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                        <h3>Áreas Monitoradas</h3>
+                        <p>1.000.000 km²</p>
+                    </article>
+
+                    <article class="stat-card">
+                        <i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i>
+                        <h3>Alertas Emitidos</h3>
+                        <p>1.200</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <aside class="login-container" aria-labelledby="login-title">
+            <form class="login-form" onsubmit="window.location.href='pages/dashboard.html'; return false;">
+                <header class="login-header">
+                    <h2 id="login-title">Bem-vindo! Faça seu login</h2>
+                    <p>Faça seu login para acessar sua conta do TerraScan</p>
+                </header>
+
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <div class="input-container">
+                        <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                        <input type="email" id="email" name="email" placeholder="usuario@email.com" required>
+                    </div>
+
+                    <label for="password">Senha</label>
+                    <div class="input-container">
+                        <i class="fa-solid fa-lock" aria-hidden="true"></i>
+                        <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
+                    </div>
+                </div>
+
+                <div class="login-options">
+                    <label>
+                        <input type="checkbox" name="remember">
+                        Lembrar-me
+                    </label>
+                </div>
+
+                <button type="submit" class="login-button">Entrar</button>
+            </form>
+        </aside>
+    </main>
 </body>
 </html>
