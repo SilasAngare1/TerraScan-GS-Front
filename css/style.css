@@ -243,6 +243,16 @@ select.form-input option {
     gap: 22px;
 }
 
+.page-content > .grid,
+.page-content > .card {
+    margin-bottom: 28px;
+}
+
+.page-content > .grid:last-child,
+.page-content > .card:last-child {
+    margin-bottom: 0;
+}
+
 .grid-2 {
     grid-template-columns: repeat(2, 1fr);
 }
