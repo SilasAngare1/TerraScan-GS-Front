@@ -67,6 +67,33 @@ body {
     border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
+.sidebar-logo {
+    display: none;
+    width: 118px;
+    height: 118px;
+
+    margin: 0 auto 12px;
+
+    border-radius: 50%;
+    object-fit: cover;
+
+    border: 1px solid rgba(124,255,155,0.35);
+    box-shadow: 0 8px 22px rgba(0,0,0,0.30);
+}
+
+.logo-container.has-logo {
+    text-align: center;
+}
+
+.logo-container.has-logo .sidebar-logo {
+    display: block;
+}
+
+.logo-container.has-logo > i,
+.logo-container.has-logo h2 {
+    display: none;
+}
+
 .logo-container h2 {
     font-size: 22px;
     font-weight: 700;
@@ -163,6 +190,12 @@ body {
 .sidebar.is-collapsed .logo-container h2,
 .sidebar.is-collapsed .sidebar-toggle span {
     display: none;
+}
+
+.sidebar.is-collapsed .logo-container.has-logo .sidebar-logo {
+    width: 46px;
+    height: 46px;
+    margin-bottom: 0;
 }
 
 .sidebar.is-collapsed .sidebar-menu a {
