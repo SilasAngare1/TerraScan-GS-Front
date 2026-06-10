@@ -11,20 +11,26 @@
     <div class="page-container">
         <aside class="sidebar" aria-label="Menu principal">
             <div class="logo-container">
+                <img class="sidebar-logo" src="../images/terrascan-logo.jpeg" alt="TerraScan" data-logo-image>
                 <i class="fa-solid fa-globe" aria-hidden="true"></i>
                 <h2>TerraScan</h2>
             </div>
 
+            <button class="sidebar-toggle" type="button" aria-label="Abrir ou fechar menu" aria-expanded="true">
+                <i class="fa-solid fa-bars" aria-hidden="true"></i>
+                <span>Menu</span>
+            </button>
+
             <nav class="sidebar-menu">
                 <ul>
                     <li>
-                        <a href="dashboard.html" aria-current="page">
+                        <a href="dashboard.html">
                             <i class="fa-solid fa-chart-line" aria-hidden="true"></i>
                             Dashboard
                         </a>
                     </li>
                     <li>
-                        <a href="map.html">
+                        <a href="map.html" aria-current="page">
                             <i class="fa-solid fa-map" aria-hidden="true"></i>
                             Mapas
                         </a>
@@ -141,7 +147,7 @@
 
                 <div class="card-body">
                     <div id="map" class="map-placeholder" role="img" aria-label="Mapa de eventos ambientais">
-                        <img src="../images/mapa.png" alt="Mapa de eventos ambientais" class="map-image">
+                        <img src="../images/mapa.png" alt="Mapa de eventos ambientais" class="map-page-image">
                     </div>
                 </div>
             </section>
@@ -235,5 +241,6 @@
             </section>
         </main>
     </div>
+    <script src="../js/script.js"></script>
 </body>
 </html>

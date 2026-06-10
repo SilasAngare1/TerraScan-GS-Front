@@ -37,13 +37,15 @@
 }
 
 
-.campo-form {
+.campo-form,
+#formContato .form-group {
     display: flex;
     flex-direction: column;
     gap: 6px;
 }
 
-.campo-form label {
+.campo-form label,
+#formContato .form-group label {
     font-weight: 600;
     font-size: 13px;
     color: var(--text-secondary);
@@ -51,7 +53,9 @@
 
 
 .campo-form input,
-.campo-form textarea {
+.campo-form textarea,
+#formContato .form-group input,
+#formContato .form-group textarea {
     padding: 12px 14px;
 
     border-radius: 14px;
@@ -70,13 +74,16 @@
 }
 
 .campo-form input:focus,
-.campo-form textarea:focus {
+.campo-form textarea:focus,
+#formContato .form-group input:focus,
+#formContato .form-group textarea:focus {
     border-color: rgba(124, 255, 155, 0.6);
     box-shadow: 0 0 0 3px rgba(124, 255, 155, 0.08);
 }
 
 
-.campo-form textarea {
+.campo-form textarea,
+#formContato .form-group textarea {
     resize: vertical;
     min-height: 120px;
 }

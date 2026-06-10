@@ -12,14 +12,20 @@
     <div class="page-container">
         <aside class="sidebar" aria-label="Menu principal">
             <div class="logo-container">
+                <img class="sidebar-logo" src="../images/terrascan-logo.jpeg" alt="TerraScan" data-logo-image>
                 <i class="fa-solid fa-globe" aria-hidden="true"></i>
                 <h2>TerraScan</h2>
             </div>
 
+            <button class="sidebar-toggle" type="button" aria-label="Abrir ou fechar menu" aria-expanded="true">
+                <i class="fa-solid fa-bars" aria-hidden="true"></i>
+                <span>Menu</span>
+            </button>
+
             <nav class="sidebar-menu">
                 <ul>
                     <li>
-                        <a href="dashboard.html" aria-current="page">
+                        <a href="dashboard.html">
                             <i class="fa-solid fa-chart-line" aria-hidden="true"></i>
                             Dashboard
                         </a>
@@ -31,7 +37,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="events.html">
+                        <a href="events.html" aria-current="page">
                             <i class="fa-solid fa-bell" aria-hidden="true"></i>
                             Eventos
                         </a>
@@ -249,5 +255,6 @@
         </main>
     </div>
 
+    <script src="../js/script.js"></script>
 </body>
 </html>
