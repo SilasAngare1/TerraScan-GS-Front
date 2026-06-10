@@ -85,9 +85,7 @@ O projeto utiliza imagens e ícones para representar o tema de monitoramento amb
 
 ## Link do repositório no GitHub
 
-PREENCHER COM O LINK PÚBLICO DO REPOSITÓRIO.
 
-Exemplo:
 
 ```text
 https://github.com/SilasAngare1/TerraScan-GS-Front
