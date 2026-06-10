@@ -473,6 +473,39 @@ select.form-input option {
     height: 420px;
 }
 
+.chart-image {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+    border-radius: 18px;
+}
+
+.dashboard-map-image {
+    max-width: 92%;
+    max-height: 92%;
+
+    display: block;
+
+    object-fit: contain;
+    border-radius: 14px;
+}
+
+.map-placeholder .map-page-image {
+    width: auto;
+    height: auto;
+
+    max-width: 92%;
+    max-height: 92%;
+
+    display: block;
+
+    object-fit: contain;
+    border-radius: 14px;
+}
+
 .table {
     width: 100%;
     border-collapse: collapse;

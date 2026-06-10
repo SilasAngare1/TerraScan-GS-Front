@@ -40,6 +40,19 @@
     object-fit:cover;
 }
 
+.map-placeholder .map-page-image{
+    width:auto;
+    height:auto;
+
+    max-width:92%;
+    max-height:92%;
+
+    display:block;
+
+    object-fit:contain;
+    border-radius:14px;
+}
+
 .map-placeholder::before{
     content:"";
 
