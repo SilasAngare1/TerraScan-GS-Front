@@ -45,6 +45,7 @@ body {
 
 .sidebar {
     width: 260px;
+    flex: 0 0 260px;
     min-height: 100vh;
 
     background: rgba(15,20,18,0.55);
@@ -150,6 +151,7 @@ body {
 
 .sidebar.is-collapsed {
     width: 88px;
+    flex-basis: 88px;
 }
 
 .sidebar.is-collapsed .logo-container {
@@ -176,6 +178,7 @@ body {
 
 .page-content {
     flex: 1;
+    min-width: 0;
     padding: 30px;
 }
 
@@ -554,11 +557,13 @@ select.form-input option {
 
     .sidebar {
         width: 100%;
+        flex: none;
         min-height: auto;
     }
 
     .sidebar.is-collapsed {
         width: 100%;
+        flex-basis: auto;
     }
 
     .sidebar.is-collapsed .logo-container {
